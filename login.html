@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+    body{
+        background-image: url('./blur-cb-background-hd-for-photo-editing-11632970405ieryt68xoi.jpg');
+    }
+    .container{
+        width:300px;
+        height:350px;
+        border:2px solid gray;
+        padding:20px;
+        margin-top:80px;
+        background-color:transparent
+
+    }
+    .ab{
+        margin-left:90px;
+    }
+    
+    body{
+          background-image:url('image7.jpg');
+          background-repeat:no-repeat;
+          background-attachment:fixed;
+          background-size:cover;
+
+  }
+
+</style>
+<body>
+   <form name="myform"  action="loginvalidation.php" method="post">
+   <div class="container" style="background-color: lightgoldenrodyellow;">
+       <center><h2><i>Login form</i></h2></center>
+       <div class="login">
+           <label>UserName</label><br>
+           <input type="text" name="username"><br>
+           <span id="alert" style="color: red;"></span>
+       </div><br>
+       <br>
+       <div class="login">
+        <label>Password</label><br>
+        <input type="password" name="password"><br>
+        <span id="alert1" style="color: red;"></span>
+    </div><br>
+    <br>
+     <div class="ab">
+    <button type="submit" style="border: 1px solid black;" class="btn btn-light mb-2" onclick="return validationform()">Submit</button>
+</div>
+</div>
+</form> 
+
+<script>
+    function validationform(){
+        var flag=true;
+         if(document.myform.username.value==""){
+             document.getElementById('alert').innerHTML="This field is required*";
+             myform.username.style.border="solid 2px red";
+             myform.username.focus();
+            //  alert("hi");
+             flag=false;
+         }else{
+             document.getElementById('alert').innerHTML="";
+             myform.username.style.border="solid 2px green";
+             flag=true;
+         }
+         if(document.myform.password.value==""){
+            // alert("hello");
+             document.getElementById('alert1').innerHTML="This field is required*";
+             myform.password.style.border="solid 2px red";
+             myform.password.focus();
+             
+             flag=false;
+         }else{
+             document.getElementById('alert1').innerHTML="";
+             myform.password.style.border="solid 2px green";
+             flag=true;
+         }
+         if(flag==false){
+             return false;
+         }else{
+             return true;
+         }
+    }
+</script>
+
+</body>
+</html>
